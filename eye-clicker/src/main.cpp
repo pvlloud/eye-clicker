@@ -26,10 +26,11 @@ void lightsOff() {
     digitalWrite(PIN_RED, HIGH);
 }
 
-void lightWhitish() {
+void lightWhite() {
     lightsOff();
     digitalWrite(PIN_BLUE, LOW);
     digitalWrite(PIN_GREEN, LOW);
+    digitalWrite(PIN_RED, LOW);
 }
 
 void lightRed() {
@@ -43,7 +44,7 @@ void setup() {
     lightsOff();
     buttonEmpty.attachClick(lightsOff);
     buttonRed.attachClick(lightRed);
-    buttonWhite.attachClick(lightWhitish);
+    buttonWhite.attachClick(lightWhite);
 }
 
 void loop() {
